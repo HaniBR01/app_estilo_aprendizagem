@@ -2,13 +2,9 @@ from django.contrib.auth.backends import BaseBackend
 from django.contrib.auth.hashers import check_password, make_password
 
 from app_estilo_aprendizagem.models import Usuario
-
-print(make_password('123'))
-
 class UsuarioBackend(BaseBackend):
 
     def authenticate(self, request, **kwargs):
-        print(kwargs)
         try:
             usuario = Usuario.objects.get(matricula=kwargs['matricula'])
             print(kwargs['senha'])

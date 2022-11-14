@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app_estilo_aprendizagem.views import auth, pages
+from app_estilo_aprendizagem.views import auth, pages, cadastro
 
 urlpatterns = [
     path('login', auth.login, name='login'),
     path('home', pages.home, name='home'),
-    path('logout', auth.logout, name='logout')
+    path('logout', auth.logout, name='logout'),
+    path('cadastro',cadastro.criar,name='cadastro')
 ]

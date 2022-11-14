@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block conteudo %}
+
+    <form method="post">
+        {%csrf_token%}
+        <div class="mb3">
+            {{frm.nome.label}}
+            {{frm.nome|add_class:'form-control'}}
+        </div>
+        <div class="mb3">
+            {{frm.data_nascimento.label}}
+            {{frm.data_nascimento|add_class:'form-control'}}
+        </div>
+        <div class="mb3">
+            {{frm.genero.label}}
+            {{frm.genero|add_class:'form-control'}}
+        </div>
+        <div class="mb3">
+            {{frm.cpf.label}}
+            {{frm.cpf|add_class:'form-control'}}
+        </div>
+        <div class="mb3">
+            {{frm.matricula.label}}
+            {{frm.matricula|add_class:'form-control'}}
+        </div>
+        <div class="mb3">
+            {{frm.email.label}}
+            {{frm.email|add_class:'form-control'}}
+        </div>
+        <div class="mb3">
+            {{frm.telefone.label}}
+            {{frm.telefone|add_class:'form-control'}}
+        </div>
+        <div class="mb3">
+            {{frm.tipo_pessoa.label}}
+            {{frm.tipo_pessoa|add_class:'form-control'}}
+        </div>
+        <div class="mb3">
+            {{frm.turma.label}}
+            {{frm.turma|add_class:'form-control'}}
+        </div>
+        <div class="mb3">
+            {{frm.password.label}}
+            {{frm.password|add_class:'form-control'}}
+        </div>
+        <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-save"></i> Salvar
+        </button>
+    </form>
+
+
+{% endblock %}
