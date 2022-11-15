@@ -10,6 +10,11 @@ class UsuarioForm(ModelForm):
     class Meta:
         model = Usuario
         fields = '__all__'
+        widgets = {
+            'password': forms.PasswordInput()
+        }
+    def clean_password(self):
+        return make_password(self.cleaned_data['password'])
 
 def criar(request):
 

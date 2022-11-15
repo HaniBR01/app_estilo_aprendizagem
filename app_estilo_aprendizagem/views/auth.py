@@ -3,7 +3,7 @@ from django import forms
 from django.shortcuts import redirect, render
 
 class LoginForm(forms.Form):
-    matricula = forms.CharField()
+    matricula = forms.CharField(max_length=7)
     senha = forms.CharField(widget=forms.PasswordInput)
 
 def login(request):
