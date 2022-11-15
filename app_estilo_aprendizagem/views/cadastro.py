@@ -16,7 +16,6 @@ def criar(request):
     frm = UsuarioForm(request.POST or None)
 
     if frm.is_valid():
-        frm.password = make_password(frm.password)
         frm.save()
         return redirect('login')
 

@@ -24,6 +24,7 @@ class Usuario(AbstractBaseUser):
     #dados unicos e primary key
     cpf = models.CharField(max_length=14, null=False, unique=True)
     matricula = models.CharField(max_length=9, null=False, unique=True)
+    USERNAME_FIELD = 'matricula'
     email = models.EmailField(max_length=100, null=False, unique=True)
     telefone = models.CharField(max_length=11, null=False, unique=True)
     
