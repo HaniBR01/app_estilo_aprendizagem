@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block conteudo %}
+
+<form method="post">
+    {%csrf_token%}
+    
+    <div class="mb3">
+        <h1>Enunciado 1:</h1>
+    </div>
+    <div class="mb3">
+        <h1>Opação A:</h1>
+    </div>
+    <div class="mb3">
+        <h1>Opação B:</h1>
+    </div>
+    <div class="mb3">
+        {{frm.questao_1.label}}
+        {{frm.questao_1|add_class:'form-control'}}
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        <i class="fa-solid fa-save"></i> Salvar
+    </button>
+</form>
+
+{% endblock %}
