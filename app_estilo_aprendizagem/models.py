@@ -63,8 +63,8 @@ class Formulario(models.Model):
         ("A","Resposta: A"),
         ("B","Resposta: B"),
     )
-    date_create = models.DateTimeField(auto_now=True, blank=True)
-    usuario = models.ForeignKey(Usuario, on_delete=models.SET_NULL, null=True)
+    date_create = models.DateTimeField(auto_now_add=True, blank=True)
+    usuario = models.ForeignKey(Usuario, on_delete=models.SET_NULL, null=True, blank=True)
     questao_1  = models.CharField(max_length=1, choices=resposta_choices, null=True, blank=True)
     questao_2  = models.CharField(max_length=1, choices=resposta_choices, null=True, blank=True)
     questao_3  = models.CharField(max_length=1, choices=resposta_choices, null=True, blank=True)
