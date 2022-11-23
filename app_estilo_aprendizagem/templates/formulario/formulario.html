@@ -6,35 +6,159 @@
 <form method="post">
     {%csrf_token%}
     <div class="mb3">
-        <h1>Enunciado 1:</h1>
-    </div>
-    <div class="mb3">
-        <h1>Opação A:</h1>
-    </div>
-    <div class="mb3">
-        <h1>Opação B:</h1>
-    </div>
-    <div class="mb3">
-        {{frm.questao_1.label}}
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_1.label}} Quando estou aprendendo algum assunto novo, gosto de:</h6>
+        <p style="margin: 0px;">a) Primeiramente, discuti-lo com outras pessoas.</p>
+        <p>b) Primeiramente, refletir sobre ele individualmente.</p>
+
         {{frm.questao_1|add_class:'form-control'}}
+    </div>
+    <div class="mb3">
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_2.label}} Se eu fosse um professor, eu preferiria ensinar uma disciplina:</h6>
+        <p style="margin: 0px;">a) Que trate com fatos e situações reais.</p>
+        <p>b) Que trate com ideias e teorias.</p>
+
         {{frm.questao_2|add_class:'form-control'}}
+    </div>
+    <div class="mb3">
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_3.label}} Eu prefiro obter novas informações através de:</h6>
+        <p style="margin: 0px;">a) Figuras, diagramas, gráficos ou mapas.</p>
+        <p>b) Instruções escritas ou informações verbais.</p>
         {{frm.questao_3|add_class:'form-control'}}
+        
+    </div>
+    <div class="mb3">        
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_4.label}} Quando resolvo problemas de matemática, eu:</h6>
+        <p style="margin: 0px;">a) Usualmente preciso resolvê-los por etapas para então chegar a solução.</p>
+        <p>b) Usualmente antevejo a solução, mas às vezes me complico para resolver cada uma das etapas.</p>
+
         {{frm.questao_4|add_class:'form-control'}}
+        
+    </div>
+    <div class="mb3">        
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_5.label}} Em um grupo de estudo, trabalhando um material difícil, eu provavelmente:</h6>
+        <p style="margin: 0px;">a) Tomo a iniciativa e contribuo com ideias.</p>
+        <p>b) Assumo uma posição observadora e analiso os fatos.</p>
+        
         {{frm.questao_5|add_class:'form-control'}}
+        
+    </div>
+    <div class="mb3">        
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_6.label}} Acho mais fácil aprender:</h6>
+        <p style="margin: 0px;">a) A partir de experimentos.</p>
+        <p>b) A partir de conceitos.</p>
+
         {{frm.questao_6|add_class:'form-control'}}
+        
+    </div>
+    <div class="mb3">        
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_7.label}} Ao ler um livro:</h6>
+        <p style="margin: 0px;">a) Eu primeiramente observo as figuras e desenhos.</p>
+        <p>b) Eu primeiramente me atento para o texto escrito.</p>
+
         {{frm.questao_7|add_class:'form-control'}}
+        
+    </div>
+    <div class="mb3">
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_8.label}} É mais importante para mim que o professor:</h6>
+        <p style="margin: 0px;">a) Apresente a matéria em etapas sequenciais.</p>
+        <p>b) Apresente um quadro geral e relacione a matéria com outros assuntos.</p>
+        
         {{frm.questao_8|add_class:'form-control'}}
+        
+    </div>
+    <div class="mb3">
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_9.label}} Nas turmas em que já estudei, eu:</h6>
+        <p style="margin: 0px;">a) Fiz amizade com muitos colegas.</p>
+        <p>b) Fui reservado e fiz amizade com alguns colegas.</p>
+        
         {{frm.questao_9|add_class:'form-control'}}
+        
+    </div>
+    <div class="mb3">
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_10.label}} Ao ler textos técnicos ou científicos, eu prefiro:</h6>
+        <p style="margin: 0px;">a) Algo que me ensine como fazer alguma coisa.</p>
+        <p>b) Algo que me apresente novas ideias para pensar.</p>
+        
         {{frm.questao_10|add_class:'form-control'}}
+        
+    </div>
+    <div class="mb3">
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_11.label}} Relembro melhor:</h6>
+        <p style="margin: 0px;">a) O que vejo.</p>
+        <p>b) O que ouço.</p>
+        
         {{frm.questao_11|add_class:'form-control'}}
+        
+    </div>
+    <div class="mb3">
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_12.label}} Eu aprendo:</h6>
+        <p style="margin: 0px;">a) Num ritmo constante, etapa por etapa.</p>
+        <p>b) Em saltos. Fico confuso(a) por algum tempo e então, repentinamente, tenho um “estalo”.</p>
+        
         {{frm.questao_12|add_class:'form-control'}}
+        
+    </div>
+    <div class="mb3">
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_13.label}} Eu prefiro estudar:</h6>
+        <p style="margin: 0px;">a) Em grupo.</p>
+        <p>b) Sozinho.</p>
+        
         {{frm.questao_13|add_class:'form-control'}}
+        
+    </div>
+    <div class="mb3">
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_14.label}} Prefiro a ideia do:</h6>
+        <p style="margin: 0px;">a) Concreto.</p>
+        <p>b) Conceitual.</p>
+        
         {{frm.questao_14|add_class:'form-control'}}
+        
+    </div>
+    <div class="mb3">
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_15.label}} Quando vejo um diagrama ou esquema em uma aula, relembro mais facilmente:</h6>
+        <p style="margin: 0px;">a) A figura.</p>
+        <p>b) O que o professor disse a respeito dela.</p>
+        
         {{frm.questao_15|add_class:'form-control'}}
+        
+    </div>
+    <div class="mb3">
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_16.label}} Quando estou aprendendo um assunto novo, eu prefiro:</h6>
+        <p style="margin: 0px;">a) Concentrar-me exclusivamente no assunto, aprendendo o máximo possível.</p>
+        <p>b) Tentar estabelecer conexões entre o assunto e outros com ele relacionados.</p>
+        
         {{frm.questao_16|add_class:'form-control'}}
+        
+    </div>
+    <div class="mb3">
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_17.label}} Normalmente eu sou considerado(a):</h6>
+        <p style="margin: 0px;">a) Extrovertido(a).</p>
+        <p>b) Reservado(a).</p>
+        
         {{frm.questao_17|add_class:'form-control'}}
+        
+    </div>
+    <div class="mb3">
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_18.label}} Prefiro disciplinas que enfatizam:</h6>
+        <p style="margin: 0px;">a) Material concreto (fatos, dados).</p>
+        <p>b) Material abstrato (conceitos, teorias).</p>
+        
         {{frm.questao_18|add_class:'form-control'}}
+        
+    </div>
+    <div class="mb3">
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_19.label}} Quando alguém está me mostrando dados, eu prefiro:</h6>
+        <p style="margin: 0px;">a) Diagramas ou gráficos.</p>
+        <p>b) Texto sumarizando os resultados.</p>
+        
         {{frm.questao_19|add_class:'form-control'}}
+        
+    </div>
+    <div class="mb3">
+        <h6 style="margin: 16px 0px 16px 0px;">{{frm.questao_20.label}} Quando estou resolvendo um problema eu:</h6>
+        <p style="margin: 0px;">a) Primeiramente penso nas etapas do processo para chegar a solução.</p>
+        <p>b) Primeiramente penso nas consequências ou aplicações da solução.</p>
+        
         {{frm.questao_20|add_class:'form-control'}}
     </div>
 

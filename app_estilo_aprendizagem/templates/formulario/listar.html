@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<h1>{{nome}}</h1>
+
+<div class="container-fluid">
+    
+    <table class="table table-dark table-striped-columns table-bordered border-light">
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Data</th>
+            <th>Analise</th>
+        </tr>
+        {% for formulario in formularios %}
+        <tr>
+            <td>{{ formulario.id }}</td>
+            <td>{{ formulario.usuario}}</td>
+            <td>{{ formulario.date_create}}</td>
+            <td>
+                <p type="button" class="btn btn-warning">
+                    <a href="{% url 'analise' formulario.id %}"><i class="fa-solid fa-wrench"></i></a>
+                </p>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>  
+</div>
+
+{% endblock %}

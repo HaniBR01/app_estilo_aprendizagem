@@ -16,8 +16,18 @@ def formulario(request):
     if frm.is_valid():
         frm.instance.usuario = request.user
         frm.save()
-        redirect('home')
+        return redirect('home')
 
     return render(request,'formulario/formulario.html',{
         "frm":frm
+    })
+
+@login_required
+def listar(request):
+
+    formularios =  Formulario.objects.filter(usuario=request.user).all()
+
+    return render(request, 'formulario/listar.html', {
+        'nome' : 'Meus Testes',
+        'formularios' : formularios
     })

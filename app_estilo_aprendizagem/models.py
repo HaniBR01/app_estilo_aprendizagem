@@ -18,7 +18,7 @@ class Turma(models.Model):
     escola = models.ForeignKey(Escola, on_delete=models.CASCADE, null=True)
     
     def __str__(self):
-        return (f"{self.curso} {self.periodo}")
+        return (f"{self.curso}, {self.periodo}")
 
 class Usuario(AbstractBaseUser):
     #dados pessoas
@@ -59,6 +59,7 @@ class Usuario(AbstractBaseUser):
         return self.nome
 
 class Formulario(models.Model):
+
     resposta_choices = (
         ("A","Resposta: A"),
         ("B","Resposta: B"),
@@ -88,4 +89,11 @@ class Formulario(models.Model):
 
 
     def __str__(self):
-        return self.usuario
+        return self.usuario.nome
+
+class Analises(models.Model):
+    formulario = models.ForeignKey(Formulario, on_delete=models.CASCADE, blank=True)
+    percepcao = models.TextField()
+    entrada = models.TextField()
+    processamento = models.TextField()
+    entendimento = models.TextField()

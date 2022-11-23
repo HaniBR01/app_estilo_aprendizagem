@@ -7,7 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    Seja bem vindo {{ request.user.nome }}
-    <a href="{% url 'logout' %}">Logout</a>
 </body>
 </html>
+
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<h1>Seja bem vindo {{ request.user.nome }}</h1>
+<div class="d-flex flex-column align-items-center">
+    <div class="container text-bg-secondary bg-gradient p-4 d-flex flex-column align-items-center justify-content-between">
+        <p type="button" class="btn btn-light">
+            <a href="{% url 'listar' %}">Veja seus testes</a>
+        </p>        
+        <p type="button" class="btn btn-light">
+            <a href="{% url 'formulario' %}">Realizar um teste</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
