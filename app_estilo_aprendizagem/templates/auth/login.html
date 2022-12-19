@@ -1,18 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Login</h1>
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block conteudo %}
+
+<h1>Login</h1>
 
     <form method="POST">
         {% csrf_token %}
-        {{ frm.as_p }}
-        <input type="submit" value="logar">
+        <div class="mb-3">
+            {{ frm.matricula.label }}
+            {{frm.matricula|add_class:'form-control'}}
+            {{ frm.senha.label }}
+            {{frm.senha|add_class:'form-control'}}
+            <button type="submit" class="btn btn-primary mt-3">Logar</button>
+        </div>
     </form>
-</body>
-</html>
+
+{% endblock %}

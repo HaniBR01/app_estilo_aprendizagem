@@ -89,27 +89,27 @@ set contEe = contEe + 1;
 end IF;
    
     if contPe >=3 then
-set textPe = 'Você gosta de fatos, dados e experimentação. Você prefere observar os fenômenos pelos sentidos: vendo, tocando e ouvindo.';
+set textPe = 'ATI';
     else
-set textPe = 'Você gosta de conceitos e teorias. Você prefere analisar os fenômenos teoricamente por princípios e modelos.';
+set textPe = 'REF';
 end if;
    
     if contEa >=3 then
-set textEa = 'Você se lembra melhor daquilo que vê: imagens, diagramas, filmes e demonstrações.';
+set textEa = 'SEN';
     else
-set textEa = 'Você tem boa argumentação e prefere uma explicação verbal a uma demonstração visual.';
+set textEa = 'INT';
 end if;
    
     if contPr >=3 then
-set textPr = 'Você trabalha bem em grupo e tende a ser experimentalista. Você gosta de fazer as coisas por si próprio.';
+set textPr = 'VIS';
     else
-set textPr = 'Você não aprende muito em situações onde não é levado a pensar sobre algo. Você tende a ser bastante teórico.';
+set textPr = 'VER';
 end if;
    
     if contEe >=3 then
-set textEe = 'Você possui raciocínio linear durante a solução de questões e se dá bem com problemas que progressivamente se tornam mais complexos. Normalmente entende primeiro as pequenas partes, para depois compreender o todo.';
+set textEe = 'SEQ';
     else
-set textEe = 'Você raciocina por saltos intuitivos e nem sempre é capaz de explicar como chega à solução. Normalmente entende primeiro o todo, para depois compreender as pequenas partes.';
+set textEe = 'GLO';
 end if;
    
     insert into app_estilo_aprendizagem_analises(formulario_id,percepcao,entrada,processamento,entendimento) values (new.id, textPe, textEa, textPr, textEe);

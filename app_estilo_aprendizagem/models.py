@@ -27,7 +27,8 @@ class Usuario(AbstractBaseUser):
     genero_choices = (
         ("M", "Masculino"),
         ("F", "Feminino"),
-        ("N", "Prefiro não declarar")
+        ("N", "Não Binário"),
+        ("O", "Outro")
     )
     genero = models.CharField(max_length=1, choices=genero_choices,null=False)
     
@@ -40,8 +41,8 @@ class Usuario(AbstractBaseUser):
     
     tipo_pessoa_choices = (
         ("N", "Núcleo de Apoio ao Educando"),
-        ("A", "Aluno"),
-        ("P", "Professor"),
+        ("E", "Estudante"),
+        ("D", "Docente"),
         ("S", "Secretario"),
     )
     tipo_pessoa = models.CharField(max_length=1, choices=tipo_pessoa_choices,null=False)
@@ -53,7 +54,7 @@ class Usuario(AbstractBaseUser):
         return self.password
 
     #foreignKey
-    turma = models.ForeignKey(Turma, on_delete=models.SET_NULL, null=True)
+    turma = models.ForeignKey(Turma, on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
         return self.nome
@@ -89,11 +90,24 @@ class Formulario(models.Model):
 
 
     def __str__(self):
-        return self.usuario.nome
+        return "Formulário New Indexs of Learning Style (NILS)"
 
 class Analises(models.Model):
+
     formulario = models.ForeignKey(Formulario, on_delete=models.CASCADE, blank=True)
-    percepcao = models.TextField()
-    entrada = models.TextField()
-    processamento = models.TextField()
-    entendimento = models.TextField()
+    usuario_turma = models.ForeignKey(Turma,on_delete=models.SET_NULL, null=True)
+    
+    dimensao_percepcao = models.TextField(null=True)
+    dimensao_entrada = models.TextField(null=True)
+    dimensao_processamento = models.TextField(null=True)
+    dimensao_entendimento = models.TextField(null=True)
+
+    reflexao_percepcao = models.TextField(null=True)
+    reflexao_entrada = models.TextField(null=True)
+    reflexao_processamento = models.TextField(null=True)
+    reflexao_entendimento = models.TextField(null=True)
+    
+    analise_percepcao = models.TextField(null=True)
+    analise_entrada = models.TextField(null=True)
+    analise_processamento = models.TextField(null=True)
+    analise_entendimento = models.TextField(null=True)

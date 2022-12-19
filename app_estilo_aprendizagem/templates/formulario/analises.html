@@ -7,21 +7,29 @@
 <div class="container-fluid">
     
     <table class="table table-dark table-striped-columns table-bordered border-light">
-        <tr>
-            <th>Nome</th>
-            <th>Processamento</th>
-            <th>Entendimento</th>
-            <th>Percepcao</th>
-            <th>Entrada</th>
-        </tr>
-        {% for analise in lista %}
-        <tr>
-            <td>{{ analise.formulario}}</td>
-            <td>{{ analise.processamento}}</td>
-            <td>{{ analise.entendimento}}</td>
-            <td>{{ analise.percepcao}}</td>
-            <td>{{ analise.entrada}}</td>
-        </tr>
+         <thead>
+            <tr>
+                <th>Processamento</th>
+                <th>Entendimento</th>
+                <th>Percepcao</th>
+                <th>Entrada</th>
+            </tr>
+        </thead>
+            {% for analise in lista %}
+        <tbody class="flex-column">
+            <tr>
+                <td>{{ analise.dimensao_processamento}}</td>
+                <td>{{ analise.dimensao_entendimento}}</td>
+                <td>{{ analise.dimensao_percepcao}}</td>
+                <td>{{ analise.dimensao_entrada}}</td>
+            </tr>
+            <tr>
+                <td>{{ analise.reflexao_processamento}}</td>
+                <td>{{ analise.reflexao_entendimento}}</td>
+                <td>{{ analise.reflexao_percepcao}}</td>
+                <td>{{ analise.reflexao_entrada}}</td>
+            </tr>
+        </tbody>
         {% endfor %}
     </table>  
 </div>

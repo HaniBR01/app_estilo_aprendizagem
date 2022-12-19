@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'app_estilo_aprendizagem.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'estilo_aprendizagem',
+        'NAME': 'app_estilo_aprendizagem',
         'PASSWORD': 'admin',
         'USER': 'root'
     }

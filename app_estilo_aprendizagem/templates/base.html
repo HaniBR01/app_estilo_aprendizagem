@@ -11,24 +11,7 @@
         .bg-gray{background-color: #adb5bd;}
     </style>
 </head>
-<body class="bg-gray">     
-    <div class="container text-bg-success p-4 d-flex flex-column align-items-center justify-content-between">
-        <h3 class="mb-3 text-dark">App Estilo de Aprendizagem</h1>
-        <div class="d-flex flex-row">
-            <p type="button" class=" m-3 btn btn-light">
-                <a href="{% url 'home' %}">Ir para Home</a>
-            </p>
-            <p type="button" class="m-3 btn btn-light">
-                <a href="{% url 'login' %}">Entrar</a>
-            </p>
-            <p type="button" class="m-3 btn btn-light">
-                <a href="{% url 'cadastro' %}">Cadastrar</a>
-            </p>
-            <p type="button" class="m-3 btn btn-light">
-                <a href="{% url 'logout' %}">Sair</a>
-            </p>
-        </div>
-    </div> 
+<body class="bg-gray">      
     <div class="container">
         {% block conteudo %}
         {% endblock %}
