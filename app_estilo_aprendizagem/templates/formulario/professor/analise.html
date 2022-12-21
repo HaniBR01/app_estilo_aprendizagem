@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<div class="m-3 d-flex flex-column">
+    <div class="container container-fluid">
+        
+        <table class="table table-secondary table-striped">
+            <tr>
+                <th>Alunos de {{nome}}</th>
+                <th>{{analises.alunos}}</th>
+            </tr>
+            <tr>
+                <td>Processamento</td>
+                <td>
+                    <p class="bg bg-dark text-light">Ativos: {{analises.ativo}}</p>
+                    <p class="bg bg-light text-dark">Reflexivos: {{analises.reflexivo}}</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Percepção</td>
+                <td>
+                    <p class="bg bg-dark text-light">Sensoriais: {{analises.sensorial}}</p>
+                    <p class="bg bg-light text-dark">Intuitivos: {{analises.intuitivo}}</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Entrada</td>
+                <td>
+                    <p class="bg bg-dark text-light">Visuais: {{analises.visual}}</p>
+                    <p class="bg bg-light text-dark">Verbais: {{analises.verbal}}</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Entendimento</td>
+                <td>
+                    <p class="bg bg-dark text-light">Sequenciais: {{analises.sequencial}}</p>
+                    <p class="bg bg-light text-dark">Globais: {{analises.global}}</p>
+                </td>
+            </tr>
+        </table>  
+    </div>
+    <div class="container-fluid d-flex flex-column">
+        <div class="container-fluid d-flex flex-row">
+            <div class=" container d-flex flex-column bg bg-secondary p-3">
+                <h6>Processamento</h6>
+                <div class="d-flex flex-row">
+                    <p class="bg bg-dark p-1 text-light">Sempre que possível, realize análises a partir de simulações (software) ou applets(animações interativas) onde os alunos precisam coletar dados e a partir desses dados,proponha discussões práticas ou problemas; Utilize animações que permitam manipular grandezas numérica ou graficamente. Animações sem interatividade (que funcionam sozinhas) devem ser utilizadas,preferencialmente, para o polo sensorial; Quando não for possível usar interações computacionais, substitua por exercícios que obriguem alguma manipulação (ou resolução). Por exemplo, deixe a resposta oculta mostrando-a apenas quando do interesse do aluno (se o aluno for intuitivo apenas mostre a resposta, se for sensorial descreva-a por etapas).</p>
+                    <p class="bg bg-light p-1 text-dark">Promova análises de conceitos a partir de exercícios, onde várias possibilidades necessitam ser comparadas antes de se executar uma atividade (questões de múltipla escolha são úteis). Quando o aluno apresentar a resposta em uma atividade, discuta (via feedback) conceitualmente o resultado - estando certo ou errado.</p>
+                </div>
+            </div>
+            <div class="container d-flex flex-column bg bg-secondary p-3">
+                <h6>Percepção</h6>
+                <div class="d-flex flex-row">
+                    <p class="bg bg-dark p-1 text-light">Devem-se realizar apresentações mais detalhadas (passo-a-passo); Priorize apresentações que façam conexões com o dia-a-dia (apresentando dados resultantes de experimentos e/ou casos reais);Explore apresentações que incitem os sentidos (utilizando vídeos, imagens, animações etc.).</p>
+                    <p class="bg bg-light p-1 text-dark">Devem-se realizar apresentações mais sucintas que exijam reflexão (menos detalhadas); Utilize apresentações mais abstratas que forcem o raciocínio (estabelecendo relações entre os conceitos, apresentando significados e teorias de forma geral); Prepare apresentações que utilizem problemas e desafios (especialmente questões abertas, pois, as múltiplas escolhas são preferidas do polo reflexivo).</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid d-flex flex-row">
+            <div class="container d-flex flex-column bg bg-secondary p-3">
+                <h6>Entrada</h6>
+                <div class="d-flex flex-row">
+                    <p class="bg bg-dark p-1 text-light">Exemplifique e aprofunde os conceitos visualmente. Os fenômenos e resultados devem ser apresentados principalmente por fotos, diagramas e fluxogramas. Quando necessário, para cursos de exatas, realize demonstrações mais claras, utilizando menos "linguagem matemática" no sentido formal de símbolos e verbetes). A matematização deve ser "visualmente" mais apresentável em termos de organização (fácil visualização e interpretação) e sempre acompanhada de representações visuais, como gráficos, para a discussão ou compreensão dos fenômenos.</p>
+                    <p class="bg bg-light p-1 text-dark">Exemplifique e aprofunde os conceitos textualmente (discursivamente); Comentários e análises sobre os fenômenos devem ser mais textuais (a não ser em raros casos onde isso se torne muito mais extenso do que um gráfico ou tabela). Durante as explicações devem-se estabelecer discussões acerca do conteúdo; Os fenômenos, para cursos de exatas, devem ser apresentados principalmente com linguagem formalmente matemática.</p>
+                    </div>
+            </div>
+            <div class="container d-flex flex-column bg bg-secondary p-3">
+                <h6>Processamento</h6>
+                <div class="d-flex flex-row">
+                    <p class="bg bg-dark p-1 text-light">Como um todo, deve-se apresentar o conteúdo de forma linear, com atividades se tornando progressivamente complexas; Deve-se partir de itens específicos para o todo, explicando cada etapa para depois apresentar o problema maior.</p>
+                    <p class="bg bg-light p-1 text-dark">Como um todo, deve-se apresentar o conteúdo por grandes etapas, de forma a analisar primeiro o todo e depois os detalhes específicos; Apresente o problema maior, para depois explicar as etapas necessárias (sugere-se que temas transversais ou de conhecimento prévio sejam dispostos na forma de conteúdo hipertextual - links - quando utilizar material virtual).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p type="button" class="btn btn-light ms-3">
+    <a href="{% url 'turmas' %}">Voltar</a>
+</p>
+
+{% endblock %}

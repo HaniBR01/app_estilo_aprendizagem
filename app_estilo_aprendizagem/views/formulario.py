@@ -16,7 +16,7 @@ def formulario(request):
     if frm.is_valid():
         frm.instance.usuario = request.user
         frm.save()
-        return redirect('home')
+        return redirect(f'analise/{frm.instance.id}')
 
     return render(request,'formulario/formulario.html',{
         "frm":frm

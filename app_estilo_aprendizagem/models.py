@@ -95,8 +95,9 @@ class Formulario(models.Model):
 class Analises(models.Model):
 
     formulario = models.ForeignKey(Formulario, on_delete=models.CASCADE, blank=True)
-    usuario_turma = models.ForeignKey(Turma,on_delete=models.SET_NULL, null=True)
-    
+    usuario_turma = models.ForeignKey(Turma,on_delete=models.RESTRICT, null=True)
+    usuario_nome = models.ForeignKey(Usuario,on_delete=models.RESTRICT, null=False)
+
     dimensao_percepcao = models.TextField(null=True)
     dimensao_entrada = models.TextField(null=True)
     dimensao_processamento = models.TextField(null=True)
@@ -106,8 +107,7 @@ class Analises(models.Model):
     reflexao_entrada = models.TextField(null=True)
     reflexao_processamento = models.TextField(null=True)
     reflexao_entendimento = models.TextField(null=True)
-    
-    analise_percepcao = models.TextField(null=True)
-    analise_entrada = models.TextField(null=True)
-    analise_processamento = models.TextField(null=True)
-    analise_entendimento = models.TextField(null=True)
+
+class Form_Atual(models.Model):
+    analises = models.ForeignKey(Analises,on_delete=models.RESTRICT, null=False)
+    aluno = models.ForeignKey(Usuario,on_delete=models.RESTRICT,null=False)

@@ -1,34 +1,20 @@
 {% extends 'base.html' %}
 
 {% block conteudo %}
-
-<div class="container text-bg-success p-4 d-flex flex-column align-items-center justify-content-between">
-    <h3 class="mb-3 text-dark">App Estilo de Aprendizagem</h1>
-    <div class="d-flex flex-row">
-        <p type="button" class=" m-3 btn btn-light">
-            <a href="{% url 'home' %}">Ir para Home</a>
-        </p>
-        <p type="button" class="m-3 btn btn-light">
-            <a href="{% url 'login' %}">Entrar</a>
-        </p>
-        <p type="button" class="m-3 btn btn-light">
-            <a href="{% url 'cadastro' %}">Cadastrar</a>
-        </p>
-        <p type="button" class="m-3 btn btn-light">
-            <a href="{% url 'logout' %}">Sair</a>
-        </p>
-    </div>
-</div>
-
-<h1>Seja bem vindo {{ request.user.nome }}</h1>
 <div class="d-flex flex-column align-items-center">
-    <div class="container text-bg-secondary bg-gradient p-4 d-flex flex-column align-items-center justify-content-between">
+    <div class="container-fluid text-bg-secondary bg-gradient p-4 d-flex flex-row align-items-center justify-content-between">
+        <div><h1>Seja bem vindo {{ request.user.nome }}</h1></div>
+        <div class="d-flex flex-column">
         <p type="button" class="btn btn-light">
             <a href="{% url 'listar' %}">Veja seus testes</a>
         </p>        
         <p type="button" class="btn btn-light">
             <a href="{% url 'formulario' %}">Realizar um teste</a>
+        </p>        
+        <p type="button" class="btn btn-light">
+            <a href="{% url 'turmas' %}">Ver turmas</a>
         </p>
+        </div>
     </div>
 </div>
 {% endblock %}
