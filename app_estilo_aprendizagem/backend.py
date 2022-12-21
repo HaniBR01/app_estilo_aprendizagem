@@ -7,7 +7,6 @@ class UsuarioBackend(BaseBackend):
     def authenticate(self, request, **kwargs):
         try:
             usuario = Usuario.objects.get(matricula=kwargs['matricula'])
-            print(kwargs['senha'])
             
             if check_password(kwargs['senha'],usuario.senha):
                 return usuario

@@ -41,7 +41,6 @@ def analisar(request,id):
             "sequencial":item[7],
             "global":item[8]
             }
-    print(analises)
     return render(request, 'formulario/professor/analise.html', {
         'nome' : nome,
         'analises' : analises
